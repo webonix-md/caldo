@@ -19,8 +19,9 @@
 
   /* ---------- стопка секций: каждая липнет, когда её низ дошёл до низа экрана ---------- */
   var stacks = [].slice.call(document.querySelectorAll('.stack'));
+  // высота без адресной строки: innerHeight на телефоне меняется при прокрутке, и секции прыгали
   function setTops() {
-    var vh = window.innerHeight;
+    var vh = document.documentElement.clientHeight;
     stacks.forEach(function (el) {
       el.style.setProperty('--t', Math.min(0, vh - el.offsetHeight) + 'px');
     });

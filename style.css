@@ -91,7 +91,7 @@ main{position:relative}
 .sec--light .head2>p,.sec--white .head2>p{color:var(--muted)}
 
 /* ---------- фото-экраны: прозрачные «окна» в фиксированную стопку фото ---------- */
-.bgstack{position:fixed;inset:0;z-index:0;background:var(--slate-2)}
+.bgstack{position:fixed;inset:0 0 auto;height:100vh;height:100lvh;z-index:0;background:var(--slate-2)}
 .bgstack img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .9s ease}
 .bgstack img.on{opacity:1}
 main{z-index:1}
